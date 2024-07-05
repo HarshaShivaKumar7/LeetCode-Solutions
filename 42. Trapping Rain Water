@@ -5,6 +5,7 @@ class Solution:
         sum = 0
         j = len(height) - 1
         right_max = height[j]
+
         while i < j:
             if left_max <= right_max:
                 sum += left_max - height[i]
@@ -14,4 +15,5 @@ class Solution:
                 sum += right_max - height[j]
                 j -= 1
                 right_max = max(right_max, height[j])
+
         return sum
